@@ -73,6 +73,7 @@
                                             <th>dm</th>
                                             <th>cad</th>
                                             <th>ane</th>
+                                            <th>pe</th>
                                             <th>Hasil</th>                                            
                                         </tr>
                                     </thead>
@@ -97,8 +98,9 @@
                                             <th>rbcc</th>
                                             <th>htn</th>
                                             <th>dm</th>
-                                            <th>cad</th>
+                                            <th>cad</th>                                            
                                             <th>ane</th>
+                                            <th>pe</th>
                                             <th>Hasil</th>                                            
                                         </tr>
                                     </tfoot>
@@ -169,6 +171,13 @@
                                             </td>
                                             <td>                                                
                                                 {% if item['ane'][0] == '0' %}
+                                                Tidak ada
+                                                {% else %}
+                                                Ada
+                                                {% endif %}
+                                            </td>
+                                            <td>                                                
+                                                {% if item['pe'][0] == '0' %}
                                                 Tidak ada
                                                 {% else %}
                                                 Ada

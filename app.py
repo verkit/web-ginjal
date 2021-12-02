@@ -59,15 +59,16 @@ def predict():
         'htn': [request.form['htn']],
         'ane': [request.form['ane']],
         'bgr': [request.form['bgr']],
+        'pe': [request.form['pe']], 
     }
-
+    
     df = pd.DataFrame(data)
     
     prediction = model.predict(df)
     if prediction == 1:
-        output = 'Gagal ginjal'
+        output = 'Gagal ginjal kronik'
     else :
-        output = 'Normal'
+        output = 'Gagal ginjal akut'
 
     data['prediction'] = output
     data['created_at'] = datetime.now()
