@@ -20,6 +20,10 @@ history_ref = db.collection('histories')
 def home():
     return render_template('index.html')
 
+@app.route("/feature")
+def feature():
+    return render_template('feature.html')
+
 @app.route("/history", methods=['GET'])
 def history():
     """
