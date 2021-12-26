@@ -24,6 +24,10 @@ def home():
 def feature():
     return render_template('feature.html')
 
+@app.route("/split")
+def split():
+    return render_template('split.html')
+
 @app.route("/history", methods=['GET'])
 def history():
     """
